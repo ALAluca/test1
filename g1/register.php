@@ -4,7 +4,6 @@
          if(isset($_POST['submit'])){
             $username = $_POST['username'];
             $email = $_POST['email'];
-            $age = $_POST['age'];
             $password = $_POST['password'];
 
         
@@ -19,7 +18,7 @@
          }
          else{
 
-            mysqli_query($con,"INSERT INTO users(Username,Email,Age,Password) VALUES('$username','$email','$age','$password')") or die("Erroe Occured");
+            mysqli_query($con,"INSERT INTO users(Username,Email,Age,Password) VALUES('$username','$email','$password')") or die("Erroe Occured");
 
             echo "<div class='message'>
                       <p>Registration successfully!</p>
@@ -64,10 +63,6 @@
                         <input type="text" name="email" id="email" autocomplete="off" required>
                     </div>
 
-                    <div class="field input">
-                        <label for="age">Age</label>
-                        <input type="number" name="age" id="age" autocomplete="off" required>
-                    </div>
                     <div class="field input">
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" autocomplete="off" required>
